@@ -107,3 +107,138 @@ body {
     background: rgba(255, 255, 255, 0.3);
     z-index: 2;
 }
+
+/* nav */
+.navBtn {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    font-size: 3rem;
+    color: var(--yellow);
+    z-index: 3;
+    cursor: pointer;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(255, 201, 20, 0.5);
+    z-index: 4;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+.nav__links {
+    list-style-type: none;
+}
+
+.nav__single-link {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease;
+    text-transform: capitalize;
+}
+
+.nav__single-link:hover {
+    background: var(--black);
+    color: var(--yellow);
+    padding-left: 1.5rem;
+}
+
+.nav--show {
+    width: 10rem;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 4%;
+    width: 30vw;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all 1s ease-out;
+}
+.social-icon:hover {
+    color: var(--yellow);
+    transform: scale(1.5);
+}
+
+.social-icon-facebook {
+    color: #3b5998;
+}
+
+.social-icon-linkedin {
+    color: #1dcaff;
+}
+
+.social-icon-instagram {
+    color: #cd486b;
+}
+.social-icon-github {
+    color: #3b4750;
+}
+
+.video__switch-container {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .video__switch-container {
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        z-index: 3;
+    }
+    .video__switch {
+        position: relative;
+        width: 5rem;
+        background: var(--yellow);
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.25rem;
+        cursor: pointer;
+        border-radius: 0.8rem;
+    }
+    .video__switch-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 0.8rem;
+        transition: all 1s ease;
+        background: var(--blue);
+    }
+    .btnSlide {
+        left: 50%;
+    }
+}
