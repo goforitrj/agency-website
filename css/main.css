@@ -373,4 +373,104 @@ body {
 .contact__submit:hover {
     background: var(--yellow);
     color: var(--black);
+    font-size: 1.5rem;
+    color: red;
+}
+
+/* reverse title */
+
+.reverse-section-title__container {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2rem 1.5rem;
+}
+
+.reverse-section-title__icon {
+    font-size: 4rem;
+    color: var(--yellow);
+    margin-left: 1rem;
+}
+
+.reverse-section-title__text {
+    line-height: 1.5;
+    border-right: 0.3rem solid var(--grey);
+    padding-right: 1rem;
+}
+
+.reverse-section-title__name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.reverse-section-title__info {
+    color: var(--grey);
+}
+
+/* projects */
+.project {
+    position: relative;
+}
+.project__img {
+    width: 100%;
+    transition: all 0.5s linear;
+}
+
+.project:hover .project__img {
+    opacity: 0.5;
+}
+
+.project__icon {
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transition: all 1s linear;
+    color: var(--white);
+    transform: sacle(0);
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.project:hover .project__icon {
+    transform: scale(1) translate(-50%, -50%);
+}
+.project__icon:hover {
+    color: var(--blue);
+}
+.project__outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: 0.5rem solid var(--black);
+    outline-offset: -2rem;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+
+.project:hover .project__outline {
+    transform: scale(1);
+}
+
+@media screen and (min-width: 768px) {
+    .project {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .project {
+        flex: 0 0 25%;
+    }
+}
+/* //project */
+
+/* progress */
+.progress__img {
+    min-height: 50vh;
+    background: url();
 }
